@@ -1,0 +1,47 @@
+body {
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.main {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-weight: bold;
+  /* border: 2px solid #fff; */
+  background: #333;
+  color: #fff;
+  position: relative;
+}
+.main::before {
+  content: '';
+  position: absolute;
+  top:-2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: #FFFFFF;
+  z-index: -1;
+
+}
+.main::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: #FFFFFF;
+  z-index: -2;
+  /*添加模糊滤镜*/
+  filter: blur(40px);
+}
+.main::before,
+.main::after{
+    background: linear-gradient(235deg,#ff0000,#060c21,#00bcd4);
+}
